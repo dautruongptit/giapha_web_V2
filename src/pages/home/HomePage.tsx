@@ -3,7 +3,7 @@ import { useApp } from '../../context'
 import { Member } from '../../types'
 import { norm } from '../../utils'
 import { MAXGEN, HOME, FOUNDED } from '../../constants'
-import { Board, BoardDecor, Couplet, COUPLET_L, COUPLET_R } from '../../components/ornaments'
+import { Board } from '../../components/ornaments'
 
 function useSearch(members: Member[], q: string) {
   return useMemo(() => {
@@ -30,7 +30,6 @@ export function HomePage() {
   return (
     <div className="p-2 sm:p-4 min-h-[calc(100dvh-48px)] flex">
       <Board className="flex-1 w-full">
-        <BoardDecor />
         <div className="relative flex flex-col items-center px-4 py-8 md:py-12 min-h-[640px] fade max-w-4xl mx-auto">
           {/* Header Title */}
           <div className="text-center">
@@ -140,12 +139,6 @@ export function HomePage() {
             >
               ✍️ Góp ý của tôi
             </a>
-          </div>
-
-          {/* Mobile Couplets */}
-          <div className="md:hidden mt-8 flex gap-4">
-            <Couplet words={COUPLET_L} />
-            <Couplet words={COUPLET_R} />
           </div>
         </div>
       </Board>

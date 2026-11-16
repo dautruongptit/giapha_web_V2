@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useApp } from '../../context'
-import { Board, BoardDecor } from '../../components/ornaments'
+import { Board } from '../../components/ornaments'
 
 export function LoginPage() {
   const [user, setUser] = useState('')
@@ -21,7 +21,6 @@ export function LoginPage() {
   return (
     <div className="p-2 sm:p-4 min-h-[calc(100dvh-44px)] flex">
       <Board className="flex-1 w-full">
-        <BoardDecor />
         <div className="relative flex flex-col items-center justify-center px-4 py-8 md:py-12 min-h-[560px]">
           <div className="paper p-7 sm:p-8 max-w-md w-full text-center shadow-lg border border-amber-900/15 rounded-xl backdrop-blur-xs bg-amber-50/95 fade">
             <div className="w-12 h-12 rounded-full bg-amber-100 border border-amber-300 text-maroon mx-auto flex items-center justify-center font-serif text-2xl shadow-inner mb-3">

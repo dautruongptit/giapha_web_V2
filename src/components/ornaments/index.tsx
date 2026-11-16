@@ -260,17 +260,6 @@ export function MiniLotus({ className = '' }: { className?: string }) {
 }
 
 /** Frame decoration (couplets on both sides) */
-export function BoardDecor({ tree = false }: { tree?: boolean }) {
-  return (
-    <>
-      <Couplet
-        words={COUPLET_L}
-        className={`hidden md:flex absolute left-3 ${tree ? 'top-24' : 'top-28'}`}
-      />
-      <Couplet
-        words={COUPLET_R}
-        className={`hidden md:flex absolute right-3 ${tree ? 'top-24' : 'top-28'}`}
-      />
-    </>
-  )
+export function BoardDecor(_props?: { tree?: boolean }) {
+  return null
 }
