@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Noto+Sans:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Noto Serif', Georgia, serif;
+  --font-sans: 'Noto Sans', system-ui, sans-serif;
+  --color-maroon: #8b1a1a;
+  --color-maroon-dark: #5e1010;
+  --color-bronze: #a87420;
+  --color-gold: #e9b949;
+  --color-cream: #fbf3d2;
+  --color-brown: #4a2e1a;
+  --color-paper: #fffaec;
+}
+
+@layer base {
+  body { font-family: var(--font-sans); color: #3b2616; background: #f3e9c4; }
+  button { cursor: pointer; }
+}
+
+.board { position: relative; background: #d9242b; padding: 8px; box-shadow: 0 6px 24px rgba(74,46,26,.35); }
+.board-gold {
+  height: 100%; padding: 26px; background-color: #f2bf2e;
+  background-image: radial-gradient(circle, #c4161c 0 2.5px, transparent 3px), radial-gradient(circle, #fff1a8 0 5px, transparent 5.5px);
+  background-size: 18px 18px; background-position: 0 0, 9px 9px;
+}
+.board-inner {
+  position: relative; height: 100%; overflow: hidden; border: 3px solid #d9242b;
+  background: radial-gradient(ellipse at center, #fffcd8 0%, #fcf0a6 65%, #f6e283 100%);
+}
+@media (max-width: 767px) { .board-gold { padding: 12px; } .board { padding: 5px; } }
+
+.paper {
+  background: #fffaec; border: 1px solid #c9a24a; outline: 1px solid #e6cf8f; outline-offset: 4px;
+  box-shadow: 0 2px 12px rgba(74,46,26,.12);
+}
+.fade { animation: fade .35s ease both; }
+@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+.skel { background: linear-gradient(90deg,#efe4c0,#f8f0d6,#efe4c0); background-size: 200% 100%; animation: sk 1.2s infinite; border-radius: 6px; }
+@keyframes sk { to { background-position: -200% 0 } }
