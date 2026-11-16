@@ -17,38 +17,66 @@
   body {
     font-family: var(--font-sans);
     color: #3b2616;
-    background-color: #f3e9c4;
     background-image: url('/vietnamese_certificate_background_enhanced_4x.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    min-height: 100vh;
   }
-  button { cursor: pointer; }
+  button {
+    cursor: pointer;
+  }
 }
 
-.board { position: relative; background: #d9242b; padding: 8px; box-shadow: 0 6px 24px rgba(74,46,26,.35); }
+/* Khung board chính hiển thị trong suốt để lộ ảnh nền phôi chứng chỉ */
+.board {
+  position: relative;
+  background: transparent;
+}
+
 .board-gold {
-  height: 100%; padding: 26px; background-color: #f2bf2e;
-  background-image: radial-gradient(circle, #c4161c 0 2.5px, transparent 3px), radial-gradient(circle, #fff1a8 0 5px, transparent 5.5px);
-  background-size: 18px 18px; background-position: 0 0, 9px 9px;
+  height: 100%;
+  background: transparent;
 }
+
 .board-inner {
-  position: relative; height: 100%; overflow: hidden; border: 3px solid #d9242b;
-  background-color: #fffcd8;
-  background-image: radial-gradient(ellipse at center, rgba(255, 252, 216, 0.7) 0%, rgba(252, 240, 166, 0.75) 65%, rgba(246, 226, 131, 0.85) 100%),
-                    url('/vietnamese_certificate_background_enhanced_4x.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
 }
-@media (max-width: 767px) { .board-gold { padding: 12px; } .board { padding: 5px; } }
 
 .paper {
-  background: #fffaec; border: 1px solid #c9a24a; outline: 1px solid #e6cf8f; outline-offset: 4px;
-  box-shadow: 0 2px 12px rgba(74,46,26,.12);
+  background: #fffaec;
+  border: 1px solid #c9a24a;
+  outline: 1px solid #e6cf8f;
+  outline-offset: 4px;
+  box-shadow: 0 4px 16px rgba(74, 46, 26, 0.15);
 }
-.fade { animation: fade .35s ease both; }
-@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
-.skel { background: linear-gradient(90deg,#efe4c0,#f8f0d6,#efe4c0); background-size: 200% 100%; animation: sk 1.2s infinite; border-radius: 6px; }
-@keyframes sk { to { background-position: -200% 0 } }
+
+.fade {
+  animation: fade 0.35s ease both;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skel {
+  background: linear-gradient(90deg, #efe4c0, #f8f0d6, #efe4c0);
+  background-size: 200% 100%;
+  animation: sk 1.2s infinite;
+  border-radius: 6px;
+}
+
+@keyframes sk {
+  to {
+    background-position: -200% 0;
+  }
+}

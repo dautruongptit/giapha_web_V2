@@ -14,7 +14,7 @@ function Page({
   wide?: boolean
 }) {
   return (
-    <div className="min-h-[calc(100dvh-44px)] py-6 px-3 bg-[#f1e6bd]">
+    <div className="min-h-[calc(100dvh-44px)] py-6 px-3">
       <div className={`paper mx-auto p-5 sm:p-8 fade ${wide ? 'max-w-3xl' : 'max-w-xl'}`}>
         <h1 className="font-serif font-bold text-2xl text-maroon">{title}</h1>
         <div className="h-px bg-bronze/50 my-4" />

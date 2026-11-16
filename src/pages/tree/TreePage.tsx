@@ -398,7 +398,7 @@ export function TreePage() {
                     )
                   return (
                     <section key={g} className="mb-3">
-                      <h3 className="sticky top-0 z-10 flex items-center gap-2 bg-[#fbf0a8]/95 py-1">
+                      <h3 className="sticky top-0 z-10 flex items-center gap-2 bg-paper/95 py-1 backdrop-blur-sm">
                         <span className="w-8 h-8 rounded-full bg-gold border-2 border-bronze text-maroon-dark font-serif font-bold text-xs flex items-center justify-center">
                           {String(g).padStart(2, '0')}
                         </span>

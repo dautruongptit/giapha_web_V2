@@ -11,9 +11,7 @@ export function Board({
 }) {
   return (
     <div className={`board ${className}`} style={style}>
-      <div className="board-gold">
-        <div className="board-inner">{children}</div>
-      </div>
+      <div className="board-inner">{children}</div>
     </div>
   )
 }
@@ -261,19 +259,18 @@ export function MiniLotus({ className = '' }: { className?: string }) {
   )
 }
 
-/** Full ornamented frame decoration used on home/login/tree. */
+/** Frame decoration (couplets on both sides) */
 export function BoardDecor({ tree = false }: { tree?: boolean }) {
   return (
     <>
-      <Medallion className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(70%,520px)] pointer-events-none" />
-      <Phoenix className="hidden md:block absolute left-[6%] bottom-2 w-52 pointer-events-none" />
-      <Phoenix flip className="hidden md:block absolute right-[6%] bottom-2 w-52 pointer-events-none" />
-      <Lotus className="absolute left-1 bottom-1 w-12 md:w-16 pointer-events-none" />
-      <Lotus className="absolute right-1 bottom-1 w-12 md:w-16 pointer-events-none" />
-      <Dragon className="hidden md:block absolute left-3 top-2 w-[24%] max-w-[300px] pointer-events-none" />
-      <Dragon flip className="hidden md:block absolute right-3 top-2 w-[24%] max-w-[300px] pointer-events-none" />
-      <Couplet words={COUPLET_L} className={`hidden md:flex absolute left-3 ${tree ? 'top-24' : 'top-28'}`} />
-      <Couplet words={COUPLET_R} className={`hidden md:flex absolute right-3 ${tree ? 'top-24' : 'top-28'}`} />
+      <Couplet
+        words={COUPLET_L}
+        className={`hidden md:flex absolute left-3 ${tree ? 'top-24' : 'top-28'}`}
+      />
+      <Couplet
+        words={COUPLET_R}
+        className={`hidden md:flex absolute right-3 ${tree ? 'top-24' : 'top-28'}`}
+      />
     </>
   )
 }
