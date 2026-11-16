@@ -617,7 +617,7 @@ export function TreePage() {
         {/* Footer legend bar */}
         <div className="shrink-0 bg-amber-50/95 backdrop-blur-md border-t border-amber-800/15 px-4 py-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5 text-xs text-stone-700">
           <p className="font-serif italic text-[11.5px] text-maroon font-medium">
-            Gia phả họ Nguyễn — {HOME} — Lập năm {FOUNDED}
+            Phả hệ dòng tộc — {HOME} — Lập năm {FOUNDED}
           </p>
 
           <div className="flex items-center gap-3 flex-wrap">

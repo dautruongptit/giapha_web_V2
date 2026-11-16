@@ -57,7 +57,7 @@ export function Dragon({ flip = false, className = '' }: { flip?: boolean; class
 }
 
 export function Scroll({
-  title = 'GIA PHẢ HỌ NGUYỄN',
+  title = 'CÂY GIA PHẢ',
   sub,
   className = '',
 }: {

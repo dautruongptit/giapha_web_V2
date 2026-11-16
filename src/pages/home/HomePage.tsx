@@ -33,7 +33,7 @@ export function HomePage() {
         <BoardDecor />
         <div className="relative flex flex-col items-center px-4 py-6 md:py-8 min-h-[640px] fade max-w-4xl mx-auto">
           {/* Scroll Banner */}
-          <Scroll className="w-full max-w-[620px]" sub={`Dòng họ Nguyễn — ${HOME}`} />
+          <Scroll className="w-full max-w-[620px]" sub={`Vùng đất ${HOME}`} />
 
           {/* Greeting */}
           <div className="text-center mt-6">
@@ -41,7 +41,7 @@ export function HomePage() {
               Kính chào, <span className="text-maroon">{actor}</span>
             </h2>
             <p className="text-xs sm:text-sm text-brown/80 mt-1 max-w-xl">
-              Gia phả họ Nguyễn vùng đất {HOME}, khởi lập năm {FOUNDED}, trải qua {MAXGEN} đời phụng sự tổ tiên và kế thừa truyền thống hiếu học, nhân nghĩa.
+              Phả hệ dòng tộc vùng đất {HOME}, khởi lập năm {FOUNDED}, trải qua {MAXGEN} đời phụng sự tổ tiên và kế thừa truyền thống hiếu học, nhân nghĩa.
             </p>
           </div>
 

@@ -28,7 +28,7 @@ export function TopBar({ route }: { route: string }) {
           className="font-serif font-bold text-base sm:text-lg tracking-wide hover:text-gold flex items-center gap-2 transition-colors"
         >
           <span className="w-2.5 h-2.5 rounded-full bg-gold shadow-xs" />
-          <span>Gia Phả Họ Nguyễn</span>
+          <span>Cây Gia Phả</span>
         </a>
         <span className="text-amber-300/40 hidden md:inline">|</span>
         <span className="text-xs text-amber-200/80 hidden md:inline font-serif italic">

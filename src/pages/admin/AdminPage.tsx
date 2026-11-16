@@ -74,7 +74,7 @@ export function AdminPage() {
             <div className="font-serif font-bold text-maroon text-lg leading-tight">
               Quản trị gia phả
             </div>
-            <div className="text-xs text-stone-500">Dòng họ Nguyễn</div>
+            <div className="text-xs text-stone-500">Phả hệ dòng tộc</div>
           </div>
         </div>
         <nav className="flex md:flex-col overflow-x-auto px-2 pb-2 gap-1">

@@ -54,7 +54,7 @@ function mk(
     spouseOf: null,
     note: '',
     hometown: HOME,
-    bio: `Thuộc đời thứ ${gen} của dòng họ Nguyễn tại ${HOME}.`,
+    bio: `Thuộc đời thứ ${gen} của dòng họ tại ${HOME}.`,
     ...extra,
   })
 }
@@ -69,7 +69,7 @@ for (let g = 1; g <= 20; g++) {
     g,
     g > 1
       ? { fatherId: 'a' + (g - 1) }
-      : { bio: 'Cụ tổ khai sinh dòng họ Nguyễn tại vùng đất Đông Triều, người dựng nhà thờ họ đầu tiên.' }
+      : { bio: 'Cụ tổ khai sinh dòng họ tại vùng đất Đông Triều, người dựng nhà thờ họ đầu tiên.' }
   )
 }
 

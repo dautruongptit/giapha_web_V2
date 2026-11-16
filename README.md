@@ -1,4 +1,4 @@
-# Gia Phả Họ Nguyễn — Web V2
+# Gia Phả — Web V2
 
 Ứng dụng web Gia phả dòng họ phát triển bằng **React 19**, **Vite 8**, **Tailwind CSS v4** và **TypeScript**.
 

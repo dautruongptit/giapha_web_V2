@@ -27,7 +27,7 @@ export function LoginPage() {
           <div className="paper mt-8 md:mt-10 p-7 max-w-md w-full text-center fade">
             <h1 className="font-serif font-bold text-2xl text-maroon">Kính chào</h1>
             <p className="text-sm text-brown/80 mt-2 leading-relaxed">
-              Kính mời con cháu đăng nhập để xem Gia phả họ Nguyễn và gửi góp ý cho Tộc trưởng.
+              Kính mời con cháu đăng nhập để xem Gia phả và gửi góp ý cho Tộc trưởng.
             </p>
             <form onSubmit={submit} className="mt-5 space-y-3 text-left">
               {err && (
