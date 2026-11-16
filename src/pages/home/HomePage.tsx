@@ -3,7 +3,7 @@ import { useApp } from '../../context'
 import { Member } from '../../types'
 import { norm } from '../../utils'
 import { MAXGEN, HOME, FOUNDED } from '../../constants'
-import { Board, BoardDecor, Scroll, Couplet, COUPLET_L, COUPLET_R } from '../../components/ornaments'
+import { Board, BoardDecor, Couplet, COUPLET_L, COUPLET_R } from '../../components/ornaments'
 
 function useSearch(members: Member[], q: string) {
   return useMemo(() => {
@@ -31,17 +31,20 @@ export function HomePage() {
     <div className="p-2 sm:p-4 min-h-[calc(100dvh-48px)] flex">
       <Board className="flex-1 w-full">
         <BoardDecor />
-        <div className="relative flex flex-col items-center px-4 py-6 md:py-8 min-h-[640px] fade max-w-4xl mx-auto">
-          {/* Scroll Banner */}
-          <Scroll className="w-full max-w-[620px]" sub={`Vùng đất ${HOME}`} />
-
-          {/* Greeting */}
-          <div className="text-center mt-6">
-            <h2 className="font-serif text-brown text-xl sm:text-2xl font-bold">
+        <div className="relative flex flex-col items-center px-4 py-8 md:py-12 min-h-[640px] fade max-w-4xl mx-auto">
+          {/* Header Title */}
+          <div className="text-center">
+            <h1 className="font-serif text-maroon text-2xl sm:text-3xl font-extrabold tracking-wide">
+              Phả Hệ Dòng Tộc
+            </h1>
+            <p className="text-xs sm:text-sm text-stone-600 mt-1 font-serif italic">
+              Vùng đất {HOME} • Khởi lập năm {FOUNDED}
+            </p>
+            <h2 className="font-serif text-brown text-lg sm:text-xl font-bold mt-4">
               Kính chào, <span className="text-maroon">{actor}</span>
             </h2>
-            <p className="text-xs sm:text-sm text-brown/80 mt-1 max-w-xl">
-              Phả hệ dòng tộc vùng đất {HOME}, khởi lập năm {FOUNDED}, trải qua {MAXGEN} đời phụng sự tổ tiên và kế thừa truyền thống hiếu học, nhân nghĩa.
+            <p className="text-xs sm:text-sm text-brown/80 mt-1.5 max-w-xl mx-auto">
+              Trải qua {MAXGEN} đời phụng sự tổ tiên và kế thừa truyền thống hiếu học, nhân nghĩa.
             </p>
           </div>
 
