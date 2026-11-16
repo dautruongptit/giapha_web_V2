@@ -14,7 +14,16 @@
 }
 
 @layer base {
-  body { font-family: var(--font-sans); color: #3b2616; background: #f3e9c4; }
+  body {
+    font-family: var(--font-sans);
+    color: #3b2616;
+    background-color: #f3e9c4;
+    background-image: url('/vietnamese_certificate_background_enhanced_4x.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
   button { cursor: pointer; }
 }
 
@@ -26,7 +35,12 @@
 }
 .board-inner {
   position: relative; height: 100%; overflow: hidden; border: 3px solid #d9242b;
-  background: radial-gradient(ellipse at center, #fffcd8 0%, #fcf0a6 65%, #f6e283 100%);
+  background-color: #fffcd8;
+  background-image: radial-gradient(ellipse at center, rgba(255, 252, 216, 0.7) 0%, rgba(252, 240, 166, 0.75) 65%, rgba(246, 226, 131, 0.85) 100%),
+                    url('/vietnamese_certificate_background_enhanced_4x.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 @media (max-width: 767px) { .board-gold { padding: 12px; } .board { padding: 5px; } }
 

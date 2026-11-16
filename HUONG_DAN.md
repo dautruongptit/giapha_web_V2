@@ -68,22 +68,57 @@ pnpm preview
 
 ## 4. Cấu Trúc Mã Nguồn
 
+Dự án được tái cấu trúc theo mô hình phân tầng module rõ ràng, tách biệt giữa Types, Data, Utils, Components và Pages:
+
 ```
 web/
 ├── src/
-│   ├── App.tsx          # Component gốc và bộ định tuyến điều hướng (Router Shell)
-│   ├── main.tsx         # Entry point React 19, gắn vào thẻ #root
-│   ├── index.css        # CSS chính tích hợp Tailwind CSS v4
-│   ├── data.ts          # Định nghĩa kiểu dữ liệu (Types) & Dữ liệu mẫu (Seed Data)
-│   ├── store.tsx        # React Context Quản lý State toàn cục (Thành viên, Góp ý, Vai trò, Log)
-│   ├── viewer.tsx       # Giao diện người xem (Trang chủ, Cây gia phả, Góp ý, Chi tiết thành viên)
-│   ├── admin.tsx        # Giao diện quản trị (Duyệt góp ý, Quản lý thành viên, Phân quyền, Nhật ký)
-│   ├── ui.tsx           # Các component giao diện dùng chung (Button, Modal, Input, Badge...)
-│   └── orn.tsx          # Hoa văn họa tiết truyền thống (Trống đồng, hoa sen trang trí)
-├── index.html           # Shell HTML chính
-├── vite.config.ts       # Cấu hình Vite & Tailwind CSS v4
-├── package.json         # Khai báo thư viện và script
-└── tsconfig.json        # Cấu hình TypeScript
+│   ├── types/                     # Định nghĩa TypeScript Interfaces & Types
+│   │   ├── member.ts              # Kiểu dữ liệu Thành viên, Quan hệ (Unit, Member)
+│   │   ├── feedback.ts            # Kiểu dữ liệu Góp ý (Feedback, Status, Type)
+│   │   ├── user.ts                # Kiểu dữ liệu Người dùng, Vai trò, Nhật ký (User, Role, Log)
+│   │   └── index.ts               # Barrel export
+│   │
+│   ├── constants/                 # Hằng số & Dữ liệu mẫu (Seed Data)
+│   │   ├── genealogy.ts           # Hằng số dòng họ (HOME, FOUNDED, MAXGEN, Labels)
+│   │   ├── seeds.ts               # Dữ liệu khởi tạo (Thành viên 20 đời, Users, Góp ý, Logs)
+│   │   └── index.ts
+│   │
+│   ├── utils/                     # Hàm tiện ích & Xử lý định dạng
+│   │   ├── text.ts                # Chuẩn hóa tiếng Việt tìm kiếm không dấu (norm)
+│   │   ├── format.ts              # Định dạng thông tin sinh/mất/ngày giỗ, thời gian
+│   │   └── index.ts
+│   │
+│   ├── context/                   # Quản lý State toàn cục & Điều hướng
+│   │   ├── AppContext.tsx         # React Context lưu trữ & thao tác dữ liệu
+│   │   ├── useRouter.ts           # Hook điều hướng theo hash URL (#/, #/tree...)
+│   │   └── index.ts
+│   │
+│   ├── components/                # Các thành phần giao diện tái sử dụng
+│   │   ├── common/                # UI components chung (Button, Badge, Modal, Empty, Skeleton)
+│   │   ├── layout/                # Layout & Điều hướng chung (TopBar)
+│   │   ├── ornaments/             # Họa tiết truyền thống (Khung phôi Board, Rồng, Phượng, Hoa sen, Cuốn thư)
+│   │   ├── member/                # Thẻ thành viên (MemberCard) & Ngăn chi tiết (MemberDrawer)
+│   │   └── index.ts
+│   │
+│   ├── pages/                     # Giao diện các trang nghiệp vụ
+│   │   ├── auth/                  # Trang đăng nhập (LoginPage)
+│   │   ├── home/                  # Trang chủ & Tìm kiếm (HomePage)
+│   │   ├── tree/                  # Cây gia phả trực quan (TreePage, RootPicker)
+│   │   ├── feedback/              # Gửi góp ý (FeedbackFormPage) & Góp ý của tôi (MyFeedbackPage)
+│   │   ├── admin/                 # Cổng quản trị phân quyền (AdminPage, Dashboard, Members, Feedbacks, Users, Logs)
+│   │   └── index.ts
+│   │
+│   ├── App.tsx                    # Component gốc & Router Shell
+│   ├── main.tsx                   # React 19 entrypoint, gắn vào #root
+│   ├── index.css                  # CSS chính tích hợp Tailwind CSS v4 & hình nền phôi
+│   └── vite-env.d.ts              # Khai báo môi trường Vite
+│
+├── public/                        # Tài nguyên tĩnh (ảnh nền phôi 4x, favicon...)
+├── index.html                     # Shell HTML chính
+├── vite.config.ts                 # Cấu hình Vite & Tailwind CSS v4
+├── package.json                   # Khai báo dependencies & scripts
+└── tsconfig.json                  # Cấu hình TypeScript & path alias (@/*)
 ```
 
 ---

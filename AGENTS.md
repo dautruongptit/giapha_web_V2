@@ -13,8 +13,14 @@ Start the Vite dev server with `pnpm dev`. It runs on port 8443 by default.
 This is the canonical project structure. Start with task-relevant files below. Only follow imports or inspect other files when required, when a documented path is missing, or when the repository contradicts this guide.
 
 - `src/main.tsx` - React entrypoint; imports `src/index.css` and mounts `src/App.tsx` into the `#root` element
-- `src/App.tsx` - Primary application component and the usual starting point for UI work
-- `src/index.css` - Global CSS entrypoint and Tailwind CSS v4 import
+- `src/App.tsx` - Primary application shell & page router
+- `src/types/` - TypeScript models for members, feedback, users, and audit logs
+- `src/constants/` - Genealogical constants, labels, and seed data
+- `src/utils/` - Utility formatters and Vietnamese text search normalizers
+- `src/context/` - Global state (members, feedback, logs, roles) & hash router
+- `src/components/` - Reusable UI, layout, member cards/drawer, and traditional ornamental frames
+- `src/pages/` - Views for Auth, Home, Tree, Feedback, and Admin management
+- `src/index.css` - Global CSS entrypoint, certificate background, and Tailwind CSS v4 import
 - `index.html` - Vite HTML shell containing the `#root` element and loading `src/main.tsx`
 - `package.json` - Project dependencies and the Vite build, development, preview, and formatting scripts
 - `vite.config.ts` - Vite configuration with React, Tailwind CSS v4, and the `@` alias for `src`
