@@ -14,22 +14,28 @@
 }
 
 @layer base {
+  html {
+    width: 100%;
+    min-height: 100%;
+  }
   body {
     font-family: var(--font-sans);
     color: #3b2616;
+    background-color: #f7eed3;
     background-image: url('/vietnamese_certificate_background_enhanced_4x.png');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     min-height: 100vh;
+    width: 100%;
   }
   button {
     cursor: pointer;
   }
 }
 
-/* Khung board chính hiển thị trong suốt để lộ ảnh nền phôi chứng chỉ */
+/* Khung board hiển thị trong suốt để lộ trọn vẹn phôi chứng chỉ nền */
 .board {
   position: relative;
   background: transparent;
